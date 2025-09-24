@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../imagens/pexels-victorfreitas-703016.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navbar-esquerda{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo{
+    height: 70px;
+    width: auto;
+    margin-top: 3px;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Alan';
+    color: white;
+    gap: 40px;
+}
+
+.cadastro button{
+    background: linear-gradient(135deg, #325b7ea1,#4682B4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'LemonRegular', serif; 
+    font-size: 14px;
+    display: flex;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+    
+   
+}
+
+
+
+@font-face {
+    font-family: 'Alan';
+    src: url('../fontes/AlanSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'LemonRegular';
+    src: url('../fontes/LEMONMILK-Regular.otf');
+}
