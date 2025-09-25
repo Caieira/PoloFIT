@@ -139,3 +139,11 @@ a{
     text-decoration: none;
     color: #4682B4;
 }
+
+.input-esqueceu button{
+    display: flex;
+    position: absolute;
+   bottom: 27%;
+   left: 40%;
+    
+}
