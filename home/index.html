@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-
 <body>
     <div class="navbar-container">
         <div class="navbar-esquerda">
@@ -22,63 +19,10 @@
         </div>
         
         <div class="cadastro">
-            <a href="../login/cadastrar.html">
+            <a href="../cadastrar.html">
                 <button>Cadastrar-se</button>
             </a>
         </div>
     </div>
-
-
-
-    <div class="chamada">
-        <h2>Sua Melhor Versão Começa Agora</h2>
-        <br>
-        <p>Na PoloFIT, cada treino é um passo em direção aos seus objetivos. <br>Descubra a força que existe em você e transforme sua determinação em resultados.</p>
-    </div>
-
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../imagens/danielle-cerullo-CQfNt66ttZM-unsplash.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../imagens/hermes-rivera-qbf59TU077Q-unsplash.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../imagens/geert-pieters-NbpUM86Jo8Y-unsplash.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../imagens/jaspinder-singh-vpVE1Xk1eR4-unsplash.jpg" alt=""></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            loop: true, 
-            autoplay: {
-                delay: 6500, 
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
-
-
-
-
 </body>
-
 </html>

@@ -19,7 +19,7 @@
         <img src="../imagens/LOGOPOLOFIT.png" alt="Logo da PoloFIT" class="logo">
 
         <div class="bv">
-            <label for="boas-vindas" class="boasvindas" style="font-size: 60px;">Bem-vindo</label>
+            <label for="boas-vindas" class="boasvindas" style="font-size: 45px;">Bem-vindo</label>
         </div>
         
         <div class="mensagem">
@@ -33,36 +33,41 @@
         <div class="dados">
                
               
+                <label for="nome">Nome completo</label>
+                <br>  
+                <div class="input-container">
+                    <input type="text" name="nome" id="" placeholder="Informe seu nome completo" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
                 
-                    <label for="nome">Nome completo</label>
-                    <br>
-                    <div class="input-container">
-                        <input type="text" name="nome" id="" placeholder="Informe seu nome completo" required>
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    
-                    <br>
-                    <label for="">Data de nascimento</label>
-                    <br>
-                    <div class="input-container">
-                        <input type="text" name="datanasc" id="" placeholder="DD/MM/AAAA" required pattern="\d{2}/\d{2}/\d{4}" title="Use o formato DD/MM/AAAA"><i class="fa-solid fa-calendar-days"></i></div>
-                    <br>
-                    <label for="email">E-mail</label>
-                    <br>
-                    <div class="input-container">
-                        <input type="email" name="email" id="" placeholder="Informe seu e-mail" required><i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <br>
-                    <label for="senha">Senha</label>
-                    <br>
-                    <div class="input-container">
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required pattern=".{4,16}" title="Sua senha deve ter entre 4 e 16 caracteres."><i class="fa-solid fa-key"></i>
-                    </div>
-                    <br>
-                    
-                    <button type="submit">Cadastrar</button>
-                    <a class="vailogin" href="../login/login.php">Já é nosso aluno? Faça login.</a>
+                <br>
+
+                <label for="">Data de nascimento</label>
+                <br>
+
+                <div class="input-container">
+                    <input type="text" name="datanasc" id="" placeholder="DD/MM/AAAA" required pattern="\d{2}/\d{2}/\d{4}" title="Use o formato DD/MM/AAAA"><i class="fa-solid fa-calendar-days"></i></div>
+                <br>
+
+                <label for="email">E-mail</label>
+                <br>
+
+                <div class="input-container">
+                    <input type="email" name="email" id="" placeholder="Informe seu e-mail" required><i class="fa-solid fa-envelope"></i>
+                </div>
+                <br>
+ 
+                <label for="senha">Senha</label>
+                <br>
+
+                <div class="input-container">
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required pattern=".{4,16}" title="Sua senha deve ter entre 4 e 16 caracteres."><i class="fa-solid fa-key"></i>
+                </div>
+                <br>
+
                 
+                <button type="submit">Cadastrar</button>
+                <a class="vailogin" href="../login/login.php">Já é nosso aluno? Faça login.</a>
            
         </div>
  

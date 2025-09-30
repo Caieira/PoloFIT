@@ -1,13 +1,11 @@
-* {
+*{
     box-sizing: border-box;
 }
 
-body {
+body{
     margin: 0;
     padding: 0;
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../imagens/pexels-victorfreitas-703016.jpg');
+    background-image: url("../imagens/pexels-victorfreitas-703016.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,13 +15,12 @@ body {
     flex-direction: column;
 }
 
-a {
+a{
     text-decoration: none;
     color: white;
 }
 
-.navbar-container {
-    position: fixed;
+.navbar-container{
     display: flex;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
@@ -32,22 +29,21 @@ a {
     width: 100%;
     justify-content: space-between;
     padding: 0 20px;
-    z-index: 1000;
 }
 
-.navbar-esquerda {
+.navbar-esquerda{
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.logo {
+.logo{
     height: 70px;
     width: auto;
     margin-top: 3px;
 }
 
-.opcoes {
+.opcoes{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,8 +52,8 @@ a {
     gap: 40px;
 }
 
-.cadastro button {
-    background: linear-gradient(135deg, #325b7ea1, #4682B4);
+.cadastro button{
+    background: linear-gradient(135deg, #325b7ea1,#4682B4);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
@@ -66,47 +62,20 @@ a {
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-    font-family: 'LemonRegular', serif;
+    font-family: 'LemonRegular', serif; 
     font-size: 14px;
+    display: flex;
     
-
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.chamada{
-    color: white;
-    text-align: center;
-    font-family: 'Alan';
-    text-shadow: 2px 2px 8px black;
-    margin-top: 80px;
-}
-
-.chamada h2{
-    font-family: 'LemonRegular';
+   
     
+    
+   
 }
 
-.swiper{
-    border-radius: 24px;
-    width: 45%;
-    height: 500px;
-    margin-top: 20px;
-    box-shadow: 100px;
-}
 
-.swiper img{
-    height: 500px;
-    width: 100%;
-}
-
-.swiper-slide{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 @font-face {
     font-family: 'Alan';
@@ -116,54 +85,4 @@ a {
 @font-face {
     font-family: 'LemonRegular';
     src: url('../fontes/LEMONMILK-Regular.otf');
-}
-
-.sair {
-    background: linear-gradient(135deg, #325b7ea1, #4682B4);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'LemonRegular', serif;
-    font-size: 14px;
-}
-
-.container_planos{
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    font-family: 'LemonRegular';
-    margin-top: 200px;
-}
-
-.plano1{
-    width: 300px;
-    height: 600px;
-    background-color: #325b7eab;
-    backdrop-filter: blur(10px);
-    color: white;
-    text-align: center;
-    border-radius: 20px;
-}
-.plano2{
-    width: 300px;
-    height: 600px;
-    background-color: #325b7eab;
-    backdrop-filter: blur(10px);
-    color: white;
-    text-align: center;
-    border-radius: 20px;
-}
-.plano3{
-    width: 300px;
-    height: 600px;
-    background-color: #325b7eab;
-    backdrop-filter: blur(10px);
-    color: white;
-    text-align: center;
-    border-radius: 20px;
 }

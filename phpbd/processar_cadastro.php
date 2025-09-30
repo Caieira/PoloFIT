@@ -1,12 +1,12 @@
 <?php
-
+    
 session_start();
 
 require('conexao.php');
-
+    
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = $_POST['senha'];   
 $datanasc = $_POST['datanasc'];
 
 $data_objeto = DateTime::createFromFormat('d/m/Y', $datanasc);
@@ -43,12 +43,12 @@ try {
         die("Erro ao cadastrar, tente novamente.");
     }
 } catch (PDOException $e) {
-    if ($e->getCode() == "23000") {
+    if($e->getCode() == "23000") {
         die("Erro: Email ja cadastrado, use outro.");
-    } else {
-        die("Erro ao conectar a base de dados: " . $e->getMessage());
-    }
-
+        } else {
+            die("Erro ao conectar a base de dados: " . $e->getMessage());
+        }
+    
 }
-
+    
 ?>
