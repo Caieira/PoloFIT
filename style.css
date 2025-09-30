@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../imagens/pexels-victorfreitas-703016.jpg');
+    background-image: url('imagens/pexels-victorfreitas-703016.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,12 +103,12 @@ a {
 
 @font-face {
     font-family: 'Alan';
-    src: url('../fontes/AlanSans-Regular.ttf');
+    src: url('fontes/AlanSans-Regular.ttf');
 }
 
 @font-face {
     font-family: 'LemonRegular';
-    src: url('../fontes/LEMONMILK-Regular.otf');
+    src: url('fontes/LEMONMILK-Regular.otf');
 }
 
 .sair {
