@@ -1,7 +1,5 @@
 # Projeto PoloFIT - Sistema de Gerenciamento de Academia
 
-# Projeto PoloFIT - Sistema de Gerenciamento de Academia
-
 ## 🚀 Acesse o Projeto Online
 
 **Você pode visualizar e interagir com a versão ao vivo do projeto no seguinte link:**
