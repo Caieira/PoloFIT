@@ -21,12 +21,3 @@ O PoloFIT é um sistema web para gerenciamento de academias, desenvolvido como u
 * **Servidor Local:** XAMPP (Apache)
 * **Gerenciador de Dependências:** Composer
 * **Biblioteca de E-mail:** PHPMailer
-
-## Como Executar o Projeto
-
-1.  Clone este repositório.
-2.  Certifique-se de ter um ambiente de servidor local como o XAMPP instalado.
-3.  Crie um banco de dados MySQL chamado `db_polofit`.
-4.  Importe a estrutura da tabela `alunos`.
-5.  Na raiz do projeto, execute `composer install` para baixar as dependências (PHPMailer).
-6.  Acesse o projeto através do seu servidor local.
