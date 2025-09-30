@@ -1,5 +1,13 @@
 # Projeto PoloFIT - Sistema de Gerenciamento de Academia
 
+# Projeto PoloFIT - Sistema de Gerenciamento de Academia
+
+## 🚀 Acesse o Projeto Online
+
+**Você pode visualizar e interagir com a versão ao vivo do projeto no seguinte link:**
+
+[**https://polofit.infinityfreeapp.com**](https://polofit.infinityfreeapp.com)
+
 ## Visão Geral
 
 O PoloFIT é um sistema web para gerenciamento de academias, desenvolvido como um projeto de aprendizado em PHP. A aplicação permite o cadastro, autenticação e, futuramente, o gerenciamento completo de alunos e suas atividades. O foco do projeto é construir uma base sólida de back-end com PHP e MySQL, seguindo boas práticas de segurança e organização de código.
