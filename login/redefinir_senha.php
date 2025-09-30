@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $token = $_POST['token'];
     $nova_senha = $_POST['senha'];
     $senha_confirmacao = $_POST['senha_confirmacao'];
-    
+
     if ($nova_senha !== $senha_confirmacao) {
         die("As senhas não coincidem.");
     }
@@ -16,14 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $token_hash = hash("sha256", $token);
-    
+
     $stmt = $pdo->prepare("SELECT id FROM alunos WHERE reset_token_hash = ? AND reset_token_expires_at > NOW()");
     $stmt->execute([$token_hash]);
     $user = $stmt->fetch();
 
     if ($user) {
         $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
-        
+
         $stmt = $pdo->prepare("UPDATE alunos SET senha_crip = ?, reset_token_hash = NULL, reset_token_expires_at = NULL WHERE id = ?");
         $stmt->execute([$nova_senha_hash, $user['id']]);
 
@@ -41,7 +41,7 @@ if (isset($_GET['token'])) {
     $stmt = $pdo->prepare("SELECT id FROM alunos WHERE reset_token_hash = ? AND reset_token_expires_at > NOW()");
     $stmt->execute([$token_hash]);
     $user = $stmt->fetch();
-    
+
     if ($user) {
         $token_valido = true;
     }
@@ -53,6 +53,7 @@ if (!$token_valido) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,12 +61,13 @@ if (!$token_valido) {
     <link rel="stylesheet" href="loginstyle.css">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <div class="dados">
         <h1>Crie sua Nova Senha</h1>
         <form method="POST">
             <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
-            
+
             <label for="senha">Nova Senha</label>
             <input type="password" name="senha" required>
             <br><br>
@@ -76,4 +78,5 @@ if (!$token_valido) {
         </form>
     </div>
 </body>
+
 </html>

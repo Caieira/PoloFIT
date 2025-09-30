@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-image: linear-gradient(135deg, #001f3f, #007bff);
 
@@ -35,19 +39,21 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.445);
     border-radius: 20px;
     width: 550px;
-    height: 465px;
+    height: 550px;
  
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    padding-top: 25px;
  
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 71%;
     transform: translate(-50%, -50%);
  
     font-family: 'Alan';
     flex-direction: column;
+    align-items: center;
+   
 }
  
 .dados label {
@@ -74,6 +80,7 @@ body{
     font-size: 12px;
     box-sizing: border-box;
 }
+
 
 .input-container{
     position: relative;
@@ -120,14 +127,14 @@ input::placeholder {
     border-radius: 20px;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
     width: 550px;
-    height: 465px;
+    height: 550px;
  
     display: flex;
     justify-content: center;
     align-items: center;
  
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 37%;
     transform: translate(-50%, -50%);
  
@@ -141,7 +148,8 @@ input::placeholder {
     display: flex;
     position: absolute;
     text-align: center;
-    bottom: 25%;
+    bottom: 20%;
+    font-size: 20px;
 }
 
 .bv{
@@ -151,7 +159,7 @@ input::placeholder {
 
 .logo{
     position: absolute;
-    bottom: 63%;
+    bottom: 69%;
     width: 150px;
     height: auto;
     left: 37%;
@@ -160,4 +168,7 @@ input::placeholder {
 .vailogin{
     text-decoration: none;
     color: #4682B4;
+    display: flex;
+    position: absolute;
+    bottom: 10%;
 }

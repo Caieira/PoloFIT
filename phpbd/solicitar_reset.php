@@ -3,7 +3,7 @@
 require 'conexao.php';
 require '../vendor/autoload.php';
 
-use PHPMailer\PHPMailer\PHPMailer;    
+use PHPMailer\PHPMailer\PHPMailer;
 
 use PHPMailer\PHPMailer\Exception;
 
@@ -18,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $token = bin2hex(random_bytes(50));
         $token_hash = hash('sha256', $token);
 
-        $expiry = date("Y-m-d H:i:s", time() +3600);
+        $expiry = date("Y-m-d H:i:s", time() + 3600);
 
         $stmt = $pdo->prepare("UPDATE alunos SET reset_token_hash = ?, reset_token_expires_at = ? WHERE email = ?");
-        
+
         $stmt->execute([$token_hash, $expiry, $email]);
 
 
@@ -36,21 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->Port = 587;
             $mail->CharSet = 'UTF-8';
 
-            $mail->setFrom('nao-responda@polofit.com','Academia PoloFIT');
+            $mail->setFrom('nao-responda@polofit.com', 'Academia PoloFIT');
             $mail->addAddress($email);
 
             $mail->isHTML(true);
             $mail->Subject = 'Redefinição de senha - Academia PoloFIT';
 
             $reset_link = "http://localhost/projeto/login/redefinir_senha.php?token=$token";
-            $mail ->Body = "Olá,<br><br>Para redefinir sua senha, por favor, clique no link a seguir: <a href='$reset_link'>Redefinir Senha</a><br><br>Se você não solicitou isso, pode ignorar este e-mail.";
+            $mail->Body = "Olá,<br><br>Para redefinir sua senha, por favor, clique no link a seguir: <a href='$reset_link'>Redefinir Senha</a><br><br>Se você não solicitou isso, pode ignorar este e-mail.";
             $mail->AltBody = "Para redefinir sua senha, copie e cole esse link no seu navegador: $reset_link";
-            
+
             $mail->send();
 
             header("Location: ../login/email_enviado.php");
 
-        }   catch (Exception $e) {
+        } catch (Exception $e) {
             die("A mensagem não pôde ser enviada. Erro do Mailer: {$mail->ErrorInfo}");
         }
 

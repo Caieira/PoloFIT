@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="loginstyle.css">
 </head>
+
 <body>
     <div class="dados">
         <h1>Recuperar senha</h1>
@@ -20,11 +22,12 @@
                 <button type="submit">Enviar</button>
             </div>
             <br>
-            
+
         </form>
         <br>
         <a href="login.php">Voltar a página de login</a>
 
     </div>
 </body>
+
 </html>
