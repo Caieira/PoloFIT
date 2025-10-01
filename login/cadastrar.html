@@ -1,77 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia PoloFIT</title>
-    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <title>Cadastre-se</title>
     <link rel="stylesheet" href="cadastrostyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    
+    <img src="../imagens/logo polofit.png" alt="" class="logo-titulo">
 
-        <div class="titulo">
-            <label for=""><img src="../imagens/logo polofit.png" alt="Logo 2 da PoloFIT"></label>
-        </div>   
+    <main class="container-cadastro">
 
-    <div class="containerbv">
-       
-        <img src="../imagens/LOGOPOLOFIT.png" alt="Logo da PoloFIT" class="logo">
+        <section class="container-bemvindo">
+            <img src="../imagens/LOGOPOLOFIT.png" alt="">
 
-        <div class="bv">
-            <label for="boas-vindas" class="boasvindas" style="font-size: 45px;">Bem-vindo</label>
-        </div>
-        
-        <div class="mensagem">
-            <label for="Mensagem" style="margin-left: 2px;">Prepare-se para o novo. Na PoloFIT, transformamos desafios em resultados. Sua melhor versão está apenas a um passo de distância. Cadastre-se e comece a escrever sua história de sucesso!</label>
-        </div>
-    </div>   
+            <h2>Bem-vindo</h2>
 
-    <form action="../phpbd/processar_cadastro.php" method="post">
- 
- 
-        <div class="dados">
-               
-              
-                <label for="nome">Nome completo</label>
-                <br>  
-                <div class="input-container">
-                    <input type="text" name="nome" id="" placeholder="Informe seu nome completo" required>
-                    <i class="fa-solid fa-user"></i>
-                </div>
+            <p>Prepare-se para o novo. Na PoloFIT, transformamos desafios em resultados. Sua melhor versão está apenas a um passo de distância. Cadastre-se e comece a escrever sua história de sucesso!</p>
+        </section>
+
+        <section class="container-formulario">
+            <form action="../phpbd/processar_cadastro.php" method="post">
                 
-                <br>
-
-                <label for="">Data de nascimento</label>
-                <br>
-
-                <div class="input-container">
-                    <input type="text" name="datanasc" id="" placeholder="DD/MM/AAAA" required pattern="\d{2}/\d{2}/\d{4}" title="Use o formato DD/MM/AAAA"><i class="fa-solid fa-calendar-days"></i></div>
-                <br>
-
-                <label for="email">E-mail</label>
-                <br>
-
-                <div class="input-container">
-                    <input type="email" name="email" id="" placeholder="Informe seu e-mail" required><i class="fa-solid fa-envelope"></i>
-                </div>
-                <br>
- 
-                <label for="senha">Senha</label>
-                <br>
-
-                <div class="input-container">
-                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required pattern=".{4,16}" title="Sua senha deve ter entre 4 e 16 caracteres."><i class="fa-solid fa-key"></i>
-                </div>
-                <br>
-
+                <label for="nome">Nome completo:</label>
+                    <div class="input-container">
+                        <input type="text" name="nome" id="nome" placeholder="Informe seu nome completo" required>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
                 
+
+                <label for="datanasc">Data de nascimento:</label>
+                    <div class="input-container">
+                        <input type="text" name="datanasc" id="datanasc" placeholder="DD/MM/AAAA" required pattern="\d{2}/\d{2}/\d{4}" title="Use o formato DD/MM/AAAA">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                
+
+                <label for="email">E-mail:</label>
+                    <div class="input-container">
+                        <input type="email" name="email" id="email" placeholder="Informe seu email" required>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                <label for="senha">Senha:</label>
+                    <div class="input-container">
+                        <input type="password" name="senha" id="senha" placeholder="Crie uma senha" required pattern=".{4,16}" title="Sua senha deve ter entre 4 e 16 caracteres.">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+
                 <button type="submit">Cadastrar</button>
-                <a class="vailogin" href="../login/login.php">Já é nosso aluno? Faça login.</a>
-           
-        </div>
- 
-    </form>
- 
+                
+                <a href="login.php">Já é nosso aluno? Faça login!</a>
+
+            </form>
+        </section>
+
+    </main>
 </body>
 </html>
