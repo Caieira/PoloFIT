@@ -39,7 +39,7 @@
                     <button type="submit">Logar</button>
 
                 <a href="esqueceu_senha.php">Esqueceu sua senha?</a>
-                <a href="../cadastrar.html">Não tem conta? Cadastre-se!</a>
+                <a href="cadastrar.html">Não é nosso aluno? Cadastre-se!</a>
             </form>
         </section>
 

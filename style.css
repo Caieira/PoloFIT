@@ -30,10 +30,12 @@ a {
     justify-content: space-between;
     padding: 0 20px;
     font-family: 'Alan';
-    position: fixed; /* Adicionado para fixar a navbar */
+    position: fixed;
+    
     top: 0;
     left: 0;
-    z-index: 1000; /* Garante que a navbar fique na frente */
+    z-index: 1000;
+
 }
 
 .navbar-esquerda {
@@ -61,14 +63,15 @@ a {
     text-align: center;
     font-family: 'Alan';
     text-shadow: 2px 2px 8px black;
-    margin-top: 100px; /* Aumentado para compensar a navbar fixa */
+    margin-top: 100px;
+    
 }
 
 .chamada h2 {
     font-family: 'LemonRegular';
 }
 
-/* ===== ESTILOS PARA O CARROSSEL ===== */
+
 
 .swiper {
     border-radius: 24px;
@@ -87,19 +90,19 @@ a {
     object-fit: cover;
 }
 
-/* Estilo para as bolinhas de paginação */
+
 .swiper-pagination-bullet {
     background-color: white !important;
     opacity: 0.7 !important;
 }
 
-/* Estilo para a bolinha da imagem ATUAL */
+
 .swiper-pagination-bullet-active {
     background-color: #4682B4 !important;
     opacity: 1 !important;
 }
 
-/* ========================================= */
+
 
 @font-face {
     font-family: 'Alan';
@@ -128,7 +131,7 @@ a {
 
 .cadastro {
     display: inline-block;
-    background: linear-gradient(135deg, #325b7ea1,#4682B4);
+    background: linear-gradient(135deg, #325b7ea1, #4682B4);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
@@ -137,48 +140,92 @@ a {
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-    font-family: 'LemonRegular', serif; 
+    font-family: 'LemonRegular', serif;
     font-size: 14px;
     display: flex;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-   
-    
-    
-   
 }
 
-.container-planos{
+.container-planos {
     display: flex;
     justify-content: center;
+    text-align: center;
     gap: 150px;
     color: white;
-    margin-top: 300px;
+    margin-top: 80px;
 }
 
-.plano1{
-    width: 300px;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(26, 24, 24, 0.8);
-    
+.container-planos h1 {
+    font-family: 'LemonRegular';
 }
-.plano2{
-    width: 300px;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(26, 24, 24, 0.8);
-    
+
+.container-planos li {
+    font-family: 'Alan';
+    margin-bottom: 10px;
 }
-.plano3{
-    width: 300px;
-    height: 600px;
+
+.plano1 {
+    width: 350px;
+    height: 800px;
     display: flex;
-    justify-content: center;
-    background-color: rgb(26, 24, 24, 0.8);
-    
+    background-color: rgba(0, 0, 0, 0.623);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    margin-bottom: 250px;
+    padding-bottom: 0px 200px;
+}
+
+.plano2 {
+    width: 350px;
+    height: 800px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.623);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+}
+
+.plano3 {
+    width: 350px;
+    height: 800px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.623);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+}
+
+.plus {
+    background-image: linear-gradient(135deg, #001f3f, #007bff);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    filter: drop-shadow(2px 2px 1px white)
+}
+
+.black {
+    background-image: linear-gradient(135deg, #00366d, #002552);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    filter: drop-shadow(2px 2px 3px white)
+}
+
+.plano1 ul{
+    margin: 10px;
+}
+.plano2 ul{
+    margin: 10px;
+}
+.plano3 ul{
+    margin: 10px;
+}
+
+.separador {
+    width: 100%;
+    margin-top: auto; 
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
