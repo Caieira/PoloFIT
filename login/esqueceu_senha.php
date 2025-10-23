@@ -5,26 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar senha</title>
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="cadastrostyle.css">
 </head>
 <body>
-    <div class="dados">
-        <h1>Recuperar senha</h1>
-        <p>Digite o email associado a conta para envio do link de redefinição.</p>
 
-        <form action="../phpbd/solicitar_reset.php" method="post">
-            <label for="email">E-mail</label>
+    <img src="../imagens/logo polofit.png" alt="" class="logo-titulo">
 
-            <div class="input-esqueceu">
-                <input type="email" name="email" placeholder="Informe seu e-mail" required>
+    <div class="container-cadastro">
+        <div class="container-formulario">
+            
+            
+            <form action="../phpbd/solicitar_reset.php" method="post" class="formulario-esqueci">
+            <h1>Recuperar senha</h1>
+            <p>Digite o email associado a conta para envio do link de redefinição.</p>
+                <label for="email">E-mail</label>
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="Informe seu e-mail" required>
+                    
+                </div>
                 <button type="submit">Enviar</button>
-            </div>
+                
+                <a href="login.php">Voltar a página de login</a>
+            </form>
             <br>
             
-        </form>
-        <br>
-        <a href="login.php">Voltar a página de login</a>
-
+        </div>
     </div>
 </body>
 </html>

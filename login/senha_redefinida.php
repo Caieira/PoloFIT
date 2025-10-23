@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senha redefinida!</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="cadastrostyle.css">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="dados">
+    <div class="container-formulario">
         <h1>Senha alterada com sucesso!</h1>
-        <p>Você ja pode fazer <a href="login.php">Login</a> Com a nova senha!</p>
+        <p>Você ja pode fazer <a href="login.php"><u>Login</u></a> Com a nova senha!</p>
     </div>
 </body>
 </html>

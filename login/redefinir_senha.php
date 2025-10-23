@@ -57,21 +57,26 @@ if (!$token_valido) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir Senha</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="cadastrostyle.css">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="dados">
+    <div class="container-formulario">
+        <img src="../imagens/LOGOPOLOFIT.png" alt="" class="logo-polo">
         <h1>Crie sua Nova Senha</h1>
         <form method="POST">
             <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
             
             <label for="senha">Nova Senha</label>
-            <input type="password" name="senha" required>
-            <br><br>
+
+            <div class="input-container">
+                <input type="password" name="senha" required></div>
+            
             <label for="senha_confirmacao">Confirme a Nova Senha</label>
-            <input type="password" name="senha_confirmacao" required>
-            <br><br>
+            <div class="input-container">
+                <input type="password" name="senha_confirmacao" required>
+            </div>
+            
             <button type="submit">Redefinir Senha</button>
         </form>
     </div>

@@ -9,10 +9,13 @@
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+    <img src="../imagens/logo polofit.png" alt="" class="logo-titulo">
+
     <main class="container-login">
 
         <section class="container-formulario-login">
-            <img src="../imagens/LOGOPOLOFIT.png" alt="Logo PoloFIT">
+            <img src="../imagens/LOGOPOLOFIT.png" alt="" class="logo-polo">
             
             <?php
             // Exibe mensagem de erro, se houver
@@ -35,12 +38,14 @@
                     <i class="fa-solid fa-key"></i>
                 </div>
 
-                
-                    <button type="submit">Logar</button>
-
                 <a href="esqueceu_senha.php">Esqueceu sua senha?</a>
                 <a href="cadastrar.html">Não é nosso aluno? Cadastre-se!</a>
+
+                <button type="submit">Logar</button>
             </form>
+            
+
+                
         </section>
 
     </main>

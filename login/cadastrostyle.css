@@ -148,15 +148,7 @@ body {
     font-size: 14px;
 }
 
-.container-login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 50px;
-}
+
 
 .container-formulario a{
     text-decoration: none;
@@ -166,7 +158,29 @@ body {
 
 /*Para a página de login */
 
-.container-login{
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(135deg, #001f3f, #007bff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'LemonRegular';
+    src: url('../fontes/LEMONMILK-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Alan';
+    src: url('../fontes/AlanSans-Regular.ttf');
+}
+
+.container-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,6 +188,13 @@ body {
     width: 100%;
     max-width: 1200px;
     margin-top: 50px;
+}
+
+
+.input-container {
+    position: relative;
+    width: 85%;
+    height: 45px;
 }
 
 
@@ -186,10 +207,6 @@ body {
     max-width: 500px;
     height: 520px;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .container-formulario-login form{
@@ -208,6 +225,19 @@ body {
     color: #4682B4;
 }
 
+.input-container{
+    position: relative;
+    width: 85%;
+    height: 40px;
+}
+
+.input-container i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4682B4;
+}
 
 .container-formulario-login input{
     width: 100%;
@@ -222,6 +252,9 @@ body {
     font-size: 16px;
 }
 
+.logo-titulo-login {
+    margin-top: -30px;
+}
 
 .container-formulario-login button {
     display: inline-block;
@@ -238,16 +271,41 @@ body {
     font-size: 14px;
 }
 
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px;
+}
+
 .container-formulario-login a{
     text-decoration: none;
     color: #4682B4;
     font-family: 'Alan';
 }
 
-.container-formulario-login img {
-    width: 150px;
-    height: auto;
-    
-    
-   
+.logo-polo {
+    height: 150px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
+
+.container-formulario h1{
+    color: #4682B4;
+    font-family: 'Alan';
+    text-align: center;
+}
+
+.container-formulario p{
+    color: #4682B4;
+    font-family: 'Alan';
+    width: 250px;
+    text-align: center;
+}
+
