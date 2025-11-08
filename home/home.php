@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>Página Inicial | PoloFIT</title>
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,42 +20,38 @@
     }
     ?>
     <div class="navbar-container">
+        <img src="../imagens/LOGOPOLOFIT.png" alt="" class="logo">
         <div class="navbar-esquerda">
-            <img src="../imagens/LOGOPOLOFIT.png" alt="" class="logo">
+            
             <div class="opcoes">
-                <a href="#">PLANOS</a>
+                <a href="#container-planos">PLANOS</a>
                 <a href="#">MODALIDADES</a>
                 <a href="#">LOCALIDADES</a>
             </div>
         </div>
         <a href="../phpbd/logout.php" class="sair">SAIR</a>
     </div>
-
+ 
     <div class="chamada">
         <h2>Sua Melhor Versão Começa Agora</h2>
-
         <p>Na PoloFIT, cada treino é um passo em direção aos seus objetivos. <br>Descubra a força que existe em você e
             transforme sua determinação em resultados.</p>
     </div>
-
+ 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../imagens/danielle-cerullo-CQfNt66ttZM-unsplash.jpg"
-                    alt="Mulher levantando peso"></div>
-            <div class="swiper-slide"><img src="../imagens/hermes-rivera-qbf59TU077Q-unsplash.jpg"
-                    alt="Homem se exercitando"></div>
-            <div class="swiper-slide"><img src="../imagens/geert-pieters-NbpUM86Jo8Y-unsplash.jpg"
-                    alt="Equipamentos de academia"></div>
-            <div class="swiper-slide"><img src="../imagens/jaspinder-singh-vpVE1Xk1eR4-unsplash.jpg"
-                    alt="Pessoa correndo na esteira"></div>
+            <div class="swiper-slide"><img src="../imagens/danielle-cerullo-CQfNt66ttZM-unsplash.jpg" alt="Mulher levantando peso"></div>
+            <div class="swiper-slide"><img src="../imagens/hermes-rivera-qbf59TU077Q-unsplash.jpg" alt="Homem se exercitando"></div>
+            <div class="swiper-slide"><img src="../imagens/geert-pieters-NbpUM86Jo8Y-unsplash.jpg" alt="Equipamentos de academia"></div>
+            <div class="swiper-slide"><img src="../imagens/jaspinder-singh-vpVE1Xk1eR4-unsplash.jpg" alt="Pessoa correndo na esteira"></div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+ 
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
@@ -75,24 +71,61 @@
             },
         });
     </script>
-
-    <div class="container-planos">
+ 
+    <div class="container-planos" id="container-planos">
         <div class="plano1">
-            <h1>PLANO NOOB</h1>
+            <h1>POLO ESSENCIAL</h1>
+            <ul>
+                <li>Acesso completo à área de musculação e cardio.</li>
+                <li>Avaliação física inicial e montagem de ficha de treino padrão.</li>
+                <li>Armário rotativo no vestiário.</li>
+                <li>Direito de participar de todos os desafios e eventos internos da academia.</li>
+                <li>Acesso a sua unidade escolhida.</li>
+            </ul>
+ 
+ 
+            <div class="botao-vai">
+                <a href="">Inscreva-se!</a>
+            </div>
+ 
         </div>
-
+ 
         <div class="plano2">
-            <h1>PLANO PRO</h1>
+            <h1>POLO <span class="plus">PLUS</span></h1>
+            <ul>
+                <li>Todos os beneficios do Polo Essencial</li>
+                <li>Acesso ilimitado e irrestrito a todas as aulas em grupo (Spinning, Yoga, Lutas, Dança, etc.).</li>
+                <li>Direito de levar um amigo(a) 4 vezes por mês.</li>
+                <li>Acesso a todas as unidades da rede PoloFIT.</li>
+                <li>Reavaliação física semestral para acompanhar sua evolução.</li>
+                <li>Acesso às cadeiras de massagem.</li>
+            </ul>
+ 
+ 
+            <div class="botao-vai">
+                <a href="">Inscreva-se!</a>
+            </div>
+ 
         </div>
-
         <div class="plano3">
-            <h1>PLANO HACKER</h1>
+            <h1>POLO <span class="black">BLACK</span></h1>
+            <ul>
+                <li>Todos os benefícios do Polo Plus</li>
+                <li>Direito de levar um amigo(a) 6 vezes por mês.</li>
+                <li>Acesso a todas as unidades da rede PoloFIT.</li>
+                <li>Reavaliação física semestral para acompanhar sua evolução.</li>
+                <li>Acesso às cadeiras de massagem.</li>
+                <li>Avaliação por Bioimpedância trimestral para análise detalhada da composição corporal.</li>
+                <li>Consulta e acompanhamento nutricional bimestral.</li>
+                <li>20% de desconto em todos os produtos da loja PoloFIT.</li>
+            </ul>
+ 
+            <div class="botao-vai">
+                <a href="">Inscreva-se!</a>
+            </div>
+ 
         </div>
-
     </div>
-
-
-
+ 
 </body>
-
 </html>
