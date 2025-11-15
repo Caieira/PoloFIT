@@ -2,6 +2,7 @@
 
 require 'conexao.php';
 require '../vendor/autoload.php';
+require '../config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;    
 
@@ -30,10 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->isSMTP();
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
-            $mail->Username = 'SMTP_USER';
-            $mail->Password = 'SMTP_PASSWORD';
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            $mail->Username = SMTP_USER;
+            $mail->Password = SMTP_PASSWORD;
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port = 465;
             $mail->CharSet = 'UTF-8';
 
             $mail->setFrom('nao-responda@polofit.com','Academia PoloFIT');
@@ -49,10 +50,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->send();
 
             header("Location: ../login/email_enviado.php");
+            exit();
 
-        }   catch (Exception $e) {
-            die("A mensagem não pôde ser enviada. Erro do Mailer: {$mail->ErrorInfo}");
-        }
+        } catch (Exception $e) {
+    die("A mensagem não pôde ser enviada. Erro do Mailer: {$mail->ErrorInfo}");
+}
 
 
     }

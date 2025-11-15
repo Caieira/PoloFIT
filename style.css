@@ -1,19 +1,20 @@
 * {
     box-sizing: border-box;
+   
+}
+ 
+html {
     scroll-behavior: smooth;
 }
  
 body {
     margin: 0;
     padding: 0;
-    background-image: url('imagens/pexels-victorfreitas-703016.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
+    background-color: black;
 }
  
 a {
@@ -23,43 +24,52 @@ a {
  
 .navbar-container {
     display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    height: 80px;
+   
+    background-color: rgb(0, 0, 0);
+    height: 70px;
     width: 100%;
     justify-content: space-between;
     padding: 0 20px;
     font-family: 'Alan';
     position: fixed;
-    
-
+   
+ 
     top: 0;
     left: 0;
     z-index: 1000;
-    
+   
 }
-
+ 
 .opcoes a{
     filter: drop-shadow(0px 0px 0.5px rgba(255, 255, 255, 0.7));
+    transition: all 0.3s ease;
 }
-
+ 
 .navbar-esquerda {
     display: flex;
     align-items: center;
     gap: 40px;
     font-size: 18px;
-    margin-left: 50%;
+    margin-left: 20%;
 }
  
-.navbar-container img {
-    filter: drop-shadow(0px 0px 0.5px rgba(255, 255, 255, 0.7));
+.opcoes {
+    margin-left: 30%;
 }
 
+.opcoes a:hover {
+    text-shadow: 0px 0px 10px white;
+} 
+ 
 .logo {
-    height: 70px;
+    height: 40px;
     width: auto;
-    margin-top: 3px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    filter: drop-shadow(0px 0px 10px white);
 }
  
 .opcoes {
@@ -68,53 +78,79 @@ a {
     align-items: center;
     color: white;
     gap: 40px;
+
 }
  
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
 .chamada {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.chamada a {
+    display: inline-block;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Fakt';
+    font-size: 20px;
+    height: 70px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.chamada h1{
+    z-index: 8;
+    position: relative;
     color: white;
-    text-align: center;
-    font-family: 'Alan';
-    text-shadow: 2px 2px 8px black;
-    margin-top: 100px;
-   filter: drop-shadow(0px 0px 0.5px rgba(255, 255, 255, 0.7));
+    text-align: left;
+    font-size: 80px;
+    font-family: 'Fakt';
+    margin-left: 120px;
 }
- 
-.chamada h2 {
-    font-family: 'LemonRegular';
-}
- 
- 
- 
-.swiper {
-    border-radius: 24px;
-    width: 45%;
-    height: 500px;
-    margin-top: 20px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.904);
-    margin-left: auto;
-    margin-right: auto;
-}
- 
-.swiper-slide img {
-    display: block;
+
+.efeito-vinheta {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    pointer-events: none;
+    z-index: 1;
+    background-image: radial-gradient(circle, transparent 50%, black 100%);
+    opacity: 1;
 }
- 
- 
-.swiper-pagination-bullet {
-    background-color: white !important;
-    opacity: 0.7 !important;
+
+.fade-video {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1000px;
+    z-index: 1;
+    background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+    
 }
- 
- 
-.swiper-pagination-bullet-active {
-    background-color: #4682B4 !important;
-    opacity: 1 !important;
-}
- 
- 
  
 @font-face {
     font-family: 'Alan';
@@ -125,39 +161,36 @@ a {
     font-family: 'LemonRegular';
     src: url('fontes/LEMONMILK-Regular.otf');
 }
- 
-.sair {
-    display: inline-block;
-    background: linear-gradient(135deg, #325b7ea1, #4682B4);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'LemonRegular', serif;
-    font-size: 14px;
+
+@font-face {
+    font-family: 'Fakt';
+    src: url('fontes/fakt-bd.ttf');
 }
+
  
 .cadastro {
     display: inline-block;
-    background: linear-gradient(135deg, #325b7ea1, #4682B4);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
-    border: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
     border-radius: 8px;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
     font-family: 'LemonRegular', serif;
     font-size: 14px;
- 
+    height: 40px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+.cadastro:hover {
+    color: black;
+    background-color: white;
 }
  
 .container-planos {
@@ -166,7 +199,7 @@ a {
     text-align: center;
     gap: 150px;
     color: white;
-    margin-top: 80px;
+    scroll-margin-top: 100px;
 }
  
 .container-planos h1 {
@@ -188,7 +221,7 @@ a {
     margin-bottom: 250px;
     padding-bottom: 0px 200px;
     border-radius: 20px 30px;
-    box-shadow: 0px 0px 30px #ffffff;
+    box-shadow: 0px 0px 20px #ffffff;
 }
  
 .plano2 {
@@ -199,19 +232,7 @@ a {
     backdrop-filter: blur(10px);
     flex-direction: column;
     border-radius: 20px 30px;
-    box-shadow: 0px 0px 30px #87c9ff;
-}
- 
-@keyframes sombraPulsante {
-    0% {
-        box-shadow: 0px 0px 50px #002fff;
-    }
-    50% {
-        box-shadow: 0px 0px 200px #001a36;
-    }
-    100% {
-        box-shadow: 0px 0px 50px #002fff;
-    }
+    box-shadow: 0px 0px 20px #ffffff;
 }
  
  
@@ -223,26 +244,18 @@ a {
     backdrop-filter: blur(10px);
     flex-direction: column;
     border-radius: 20px 30px;
-    box-shadow: 0px 0px 50px #002fff;
-    animation-name: sombraPulsante;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    box-shadow: 0px 0px 20px #ffffff;
+   
 }
  
 .plus {
-    background-image: linear-gradient(135deg, #001f3f, #007bff);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    filter: drop-shadow(2px 2px 1px white)
+    text-shadow: 0px 0px 5px white;
 }
  
 .black {
-    background-image: linear-gradient(135deg, #00366d, #002552);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    filter: drop-shadow(2px 2px 3px white)
+    background-color: white;
+    color: black;
+    border-radius: 4px;
 }
  
 .plano1 ul{
@@ -255,20 +268,12 @@ a {
     margin: 10px;
 }
  
-.separador {
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
  
 .botao-vai {
-    background: linear-gradient(135deg, #325b7ea1, #4682B4);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
-    border: none;
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
     border-radius: 8px;
     color: white;
     padding: 10px 20px;
@@ -286,4 +291,74 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+
+.botao-vai:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.swiper-modalidades {
+    width: 90%;
+    max-width: 1400px; 
+    height: 500px;
+    margin: 30px auto 80px auto; 
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+.swiper-modalidades .swiper-slide {
+    position: relative; 
+    border-radius: 10px;
+    overflow: hidden; 
+    background: #222;
+    box-shadow: 0px 0px 0px white;
+
+    transition: all 0.3s ease;
+}
+
+.swiper-modalidades .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.8;
+}
+
+
+.swiper-modalidades .slide-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 20px;
+    color: white;
+    font-family: 'LemonRegular', sans-serif;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    
+   
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+}
+
+.swiper-modalidades .slide-texto h3 {
+    margin: 0; 
+}
+
+
+.swiper-slide:hover{
+    box-shadow: 0px 0px 20px white;
+}
+
+.titulo-modalidades {
+    color: white;
+    font-family: 'Fakt';
+    font-size: 50px;
+    text-align: center;
+    margin-top: 150px;
+    scroll-margin-top: 90px;
 }

@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(135deg, #001f3f, #007bff);
+    background-image: black;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -31,16 +31,17 @@ body {
 }
 
 .container-bemvindo{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../imagens/ivan-theodoulou-N2CsnOtbLRU-unsplash.jpg');
+    background-color: black;
     background-size: cover;
     background-position: center;
     padding: 8px;
-    border-radius: 20px;
+    
     color: white;
     width: 100%;
     max-width: 500px;
     height: 520px;
-
+    
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,14 +76,16 @@ body {
 }
 
 .container-formulario{
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     padding: 8px;
     border-radius: 20px;
     color: white;
     width: 100%;
     max-width: 500px;
     height: 520px;
-    
+    border-style: solid;
+    border-width: 1px;
+    border-color: white
     
 }
 
@@ -99,7 +102,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     width: 85%;
-    color: #4682B4;
+    color: #ffffff;
 }
 
 .input-container{
@@ -113,7 +116,7 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #4682B4;
+    color: white;
 }
 
 .container-formulario input{
@@ -135,25 +138,36 @@ body {
 
 .container-formulario button {
     display: inline-block;
-    background: linear-gradient(135deg, #325b7ea1,#4682B4);
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
-    border: none;
     border-radius: 8px;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
     font-family: 'LemonRegular', serif; 
     font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-
+.container-formulario button:hover {
+    color: black;
+    background-color: white;
+}
 
 .container-formulario a{
     text-decoration: none;
-    color: #4682B4;
+    color: #ffffff;
     font-family: 'Alan';
+    transition: all 0.3s ease;
+}
+
+.container-formulario a:hover {
+    text-shadow: 0px 0px 20px white;
 }
 
 /*Para a página de login */
@@ -162,7 +176,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(135deg, #001f3f, #007bff);
+    background-color: black;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -199,14 +213,16 @@ body {
 
 
 .container-formulario-login{
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     padding: 8px;
     border-radius: 20px;
     color: white;
     width: 100%;
     max-width: 500px;
     height: 520px;
-    
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
 }
 
 .container-formulario-login form{
@@ -222,7 +238,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     width: 85%;
-    color: #4682B4;
+    color: #ffffff;
 }
 
 .input-container{
@@ -236,7 +252,7 @@ body {
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #4682B4;
+    color: #000000;
 }
 
 .container-formulario-login input{
@@ -258,17 +274,25 @@ body {
 
 .container-formulario-login button {
     display: inline-block;
-    background: linear-gradient(135deg, #325b7ea1,#4682B4);
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
-    border: none;
     border-radius: 8px;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
     font-family: 'LemonRegular', serif; 
     font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.container-formulario-login button:hover {
+    color: black;
+    background-color: white;
 }
 
 .container-login{
@@ -283,8 +307,13 @@ body {
 
 .container-formulario-login a{
     text-decoration: none;
-    color: #4682B4;
+    color: #ffffff;
     font-family: 'Alan';
+    transition: all 0.3s ease;
+}
+
+.container-formulario-login a:hover {
+    text-shadow: 0px 0px 20px white;
 }
 
 .logo-polo {
@@ -297,13 +326,13 @@ body {
 }
 
 .container-formulario h1{
-    color: #4682B4;
+    color: #ffffff;
     font-family: 'Alan';
     text-align: center;
 }
 
 .container-formulario p{
-    color: #4682B4;
+    color: #ffffff;
     font-family: 'Alan';
     width: 250px;
     text-align: center;

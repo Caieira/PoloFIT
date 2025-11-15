@@ -19,60 +19,120 @@
         exit();
     }
     ?>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
     <div class="navbar-container">
-        <img src="../imagens/LOGOPOLOFIT.png" alt="" class="logo">
+       
         <div class="navbar-esquerda">
-            
+           <a href="#"><img src="../imagens/logo polofit.png" alt="" class="logo"></a>
             <div class="opcoes">
+                <a href="#container-modalidades">MODALIDADES</a>
                 <a href="#container-planos">PLANOS</a>
-                <a href="#">MODALIDADES</a>
-                <a href="#">LOCALIDADES</a>
+                <a href="#">ACADEMIAS</a>
             </div>
+            <a href="../index.html" class="cadastro">SAIR</a>
         </div>
-        <a href="../phpbd/logout.php" class="sair">SAIR</a>
     </div>
  
     <div class="chamada">
-        <h2>Sua Melhor Versão Começa Agora</h2>
-        <p>Na PoloFIT, cada treino é um passo em direção aos seus objetivos. <br>Descubra a força que existe em você e
-            transforme sua determinação em resultados.</p>
-    </div>
- 
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../imagens/danielle-cerullo-CQfNt66ttZM-unsplash.jpg" alt="Mulher levantando peso"></div>
-            <div class="swiper-slide"><img src="../imagens/hermes-rivera-qbf59TU077Q-unsplash.jpg" alt="Homem se exercitando"></div>
-            <div class="swiper-slide"><img src="../imagens/geert-pieters-NbpUM86Jo8Y-unsplash.jpg" alt="Equipamentos de academia"></div>
-            <div class="swiper-slide"><img src="../imagens/jaspinder-singh-vpVE1Xk1eR4-unsplash.jpg" alt="Pessoa correndo na esteira"></div>
+        <video autoplay loop muted class="video-background">
+            <source src="../imagens/VideoPolofit.mp4">
+        </video>
+
+        <div class="fade-video"></div>
+        <div class="efeito-vinheta"></div>
+
+        <div class="chamada-conteudo">
+            <h1>O MELHOR <br> DE VOCÊ <br> COMEÇA <br> AGORA. <br>
+                <a href="#container-planos" class="botao-chamada">CONHEÇA OS PLANOS</a></h1>
+            
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+
+       
+
     </div>
  
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <h1 class="titulo-modalidades" id="container-modalidades">NOSSAS MODALIDADES</h1>
+
+    <div class="swiper-modalidades">
+
+        
+
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+            <img src="../imagens/Homemmusculacao.jpg" alt="Musculação">
+            <div class="slide-texto">
+                <h3>MUSCULAÇÃO</h3>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../imagens/Mulherboxe.png" alt="Lutas">
+            <div class="slide-texto">
+                <h3>Lutas</h3>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../imagens/Cardio.png" alt="Bio Mobilidade">
+            <div class="slide-texto">
+                <h3>Cardio</h3>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../imagens/Yoga.jpg" alt="Yoga">
+            <div class="slide-texto">
+                <h3>Yoga</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script>
+    var swiperModalidades = new Swiper(".swiper-modalidades", {
+     
+        slidesPerView: 4,
+        
+      
+        spaceBetween: 20, 
+        
+        
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        
+        breakpoints: {
+            
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            
+            641: {
+                slidesPerView: 2, 
+                spaceBetween: 15
+            },
+            
+            1025: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        }
+    });
+</script>
  
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
- 
-    <div class="container-planos" id="container-planos">
+    <h1 class="titulo-modalidades" id="container-planos">NOSSOS PLANOS</h1>
+
+    <div class="container-planos">
         <div class="plano1">
             <h1>POLO ESSENCIAL</h1>
             <ul>
@@ -84,9 +144,9 @@
             </ul>
  
  
-            <div class="botao-vai">
-                <a href="">Inscreva-se!</a>
-            </div>
+        
+                <a href="" class="botao-vai">Inscreva-se!</a>
+            
  
         </div>
  
@@ -102,9 +162,9 @@
             </ul>
  
  
-            <div class="botao-vai">
-                <a href="">Inscreva-se!</a>
-            </div>
+            
+                <a href="" class="botao-vai">Inscreva-se!</a>
+        
  
         </div>
         <div class="plano3">
@@ -120,9 +180,9 @@
                 <li>20% de desconto em todos os produtos da loja PoloFIT.</li>
             </ul>
  
-            <div class="botao-vai">
-                <a href="">Inscreva-se!</a>
-            </div>
+            
+                <a href="" class="botao-vai">Inscreva-se!</a>
+        
  
         </div>
     </div>
