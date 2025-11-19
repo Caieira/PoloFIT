@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | PoloFIT</title>
+    <title>Adm | PoloFIT</title>
     <link rel="stylesheet" href="cadastrostyle.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
@@ -20,11 +20,11 @@
             <?php
             
             if (isset($_GET['erro'])) {
-                echo '<p class="mensagem-erro">E-mail ou senha inválidos.</p>';
+                echo '<script>alert("Acesso negado.")</script>';
             }
             ?>
 
-            <form action="../phpbd/verificar_login.php" method="POST">
+            <form action="../phpbd/verificar_adm.php" method="POST">
                 
                 <label for="email">E-mail:</label>
                 <div class="input-container">
@@ -39,7 +39,7 @@
                 </div>
 
                 <a href="esqueceu_senha.php">Esqueceu sua senha?</a>
-                <a href="cadastrar.html">Não é nosso aluno? Cadastre-se!</a> <a href="loginadm.php">É administrador? Logue-se aqui</a>
+                <a href="login.php">Voltar</a>
 
                 <button type="submit">Logar</button>
             </form>
