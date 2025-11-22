@@ -22,7 +22,7 @@
             <div class="opcoes">
                 <a href="#container-modalidades">MODALIDADES</a>
                 <a href="#container-planos">PLANOS</a>
-                <a href="#">ACADEMIAS</a>
+                <a href="#unidades">UNIDADES</a>
             </div>
             <a href="login/cadastrar.html" class="cadastro">CADASTRO</a>
         </div>
@@ -138,7 +138,9 @@
  
  
         
-                <a href="" class="botao-vai">Inscreva-se!</a>
+                <div class="botao-vai">
+    <a href="../phpbd/contratar_plano.php?plano=1" onclick="return confirm('Deseja assinar o Plano Essencial?');">Inscreva-se!</a>
+</div>
             
  
         </div>
@@ -156,7 +158,10 @@
  
  
             
-                <a href="" class="botao-vai">Inscreva-se!</a>
+         
+        <div class="botao-vai">
+        <a href="../phpbd/contratar_plano.php?plano=1" onclick="return confirm('Deseja assinar o Plano Essencial?');">Inscreva-se!</a>
+        </div>
         
  
         </div>
@@ -174,11 +179,54 @@
             </ul>
  
             
-                <a href="" class="botao-vai">Inscreva-se!</a>
+                <div class="botao-vai">
+                    <a href="../phpbd/contratar_plano.php?plano=3" onclick="return confirm('Deseja assinar o Plano Black?');">Inscreva-se!</a>
+                </div>
         
  
         </div>
     </div>
+
+
+    
+    
+    <h1 class="titulo-modalidades">NOSSAS UNIDADES </h1>
+    
+
+    <div class="secao-unidades">
+    
+
+    <div class="lista-unidades">
+        
+        <div class="card-academia">
+            <img src="imagens/polofitcentro.jpg" alt="Unidade Centro">
+            <div class="info-academia">
+                <h3>POLOFIT CENTRO</h3>
+                <p>Av. Paulista, 1000 - SP</p>
+                <span class="status aberta">Aberta 24h</span>
+            </div>
+        </div>
+
+        <div class="card-academia">
+            <img src="imagens/polofitsul.png" alt="Unidade Sul">
+            <div class="info-academia">
+                <h3>POLOFIT SUL</h3>
+                <p>Rua dos Pinheiros, 500 - SP</p>
+                <span class="status fechando">Fecha às 23:00</span>
+            </div>
+        </div>
+
+        <div class="card-academia">
+            <img src="imagens/polofitnorte.png" alt="Unidade Norte">
+            <div class="info-academia">
+                <h3>POLOFIT NORTE</h3>
+                <p>Av. Braz Leme, 200 - SP</p>
+                <span class="status">06:00 às 23:00</span>
+            </div>
+        </div>
+
+    </div>
+</div>
  
 </body>
 </html>

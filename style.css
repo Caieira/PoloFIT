@@ -218,7 +218,6 @@ a {
     background-color: rgba(0, 0, 0, 0.623);
     backdrop-filter: blur(10px);
     flex-direction: column;
-    margin-bottom: 250px;
     padding-bottom: 0px 200px;
     border-radius: 20px 30px;
     box-shadow: 0px 0px 20px #ffffff;
@@ -327,6 +326,7 @@ a {
     height: 100%;
     object-fit: cover; 
     opacity: 0.8;
+    transition: all 0.3s ease;
 }
 
 
@@ -350,8 +350,9 @@ a {
 }
 
 
-.swiper-slide:hover{
+.swiper-slide:hover, .swiper-slide:hover img{
     box-shadow: 0px 0px 20px white;
+    transform: translateY(-10px);
 }
 
 .titulo-modalidades {
@@ -359,6 +360,171 @@ a {
     font-family: 'Fakt';
     font-size: 50px;
     text-align: center;
-    margin-top: 150px;
-    scroll-margin-top: 90px;
+    
+}
+
+.container-unidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+
+.card-unidade {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 450px;
+    max-height: 300px;
+    
+    transition: all 0.3s ease;
+}
+
+.card-unidade:hover {
+    transform: translateY(-10px);
+    border-color: #4682B4;
+}
+
+.card-unidade img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-unidade {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+.info-unidade h3 {
+    font-family: 'LemonRegular';
+    margin-bottom: 10px;
+    color: #4682B4;
+}
+
+.info-unidade p {
+    font-family: 'Alan';
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-unidade span {
+    display: inline-block;
+    background: #2272E3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.secao-unidades {
+    padding: 80px 20px;
+    background-color: #000; /* Fundo preto para destacar as fotos */
+    color: white;
+    text-align: center;
+}
+
+.titulo-unidades h2 {
+    font-family: 'LemonRegular';
+    font-size: 2.5rem;
+    color: #4682B4;
+    margin-bottom: 10px;
+}
+
+.titulo-unidades p {
+    font-family: 'Alan';
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 50px;
+}
+
+
+.lista-unidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.card-academia {
+    position: relative; 
+    width: 100%;
+    max-width: 400px; 
+    height: 500px;  
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-academia:hover {
+    transform: translateY(-10px);
+    border-color: #4682B4;
+}
+
+
+.card-academia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.info-academia {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    text-align: left;
+    
+   
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.info-academia h3 {
+    font-family: 'LemonRegular';
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.info-academia p {
+    font-family: 'Alan';
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-family: 'Alan';
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.status.aberta {
+    background-color: #2272E3; 
+}
+
+.status.fechando {
+    background-color: #e3a222; 
 }
